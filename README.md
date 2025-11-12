@@ -41,7 +41,7 @@ This repository contains two advanced security research frameworks focused on La
 
 ```bash
 cd a_salami/ && python -c "from a_salami import Adaptive_W2SAttack"
-cd salami_attack/ && python -c "from w2s_attack import W2SAttack"
+cd salami_attack/ && python -c "from salami_attack import W2SAttack"
 ```
 
 - 📖 [Salami Attack Detailed Documentation](./salami_attack/README.md)
