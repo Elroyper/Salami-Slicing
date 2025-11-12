@@ -1,4 +1,4 @@
-# 🚀Adaptive W2S Attack Framework 
+# 🚀A-Salami Attack Framework 
 
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
@@ -59,7 +59,7 @@ class Your_Chat_Model(Chat_Model):
 ### Initialization with Custom Model
 
 ```python
-from aw2s_attack import Adaptive_W2SAttack
+from a_salami import Adaptive_W2SAttack
 
 # initialize the attack framework
 attack = Adaptive_W2SAttack(

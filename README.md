@@ -1,13 +1,13 @@
 # 🤖 Multi-Model Black-box Jailbreak Framework Suite 🛡️
 
-> **Security Research Toolbox Built on W2S Methodology**
+> **Security Research Toolbox Built on Salami Slicing Methodology**
 
 ## 📦 Overview
 
 This repository contains two advanced security research frameworks focused on Large Language Model safety assessment and red-team testing:
 
-- **W2S Attack** 🚀 - Innovative **Weak-to-Strong** progressive attack framework
-- **Adaptive W2S Attack** 🔧 - Modern **adaptive multi-turn** attack system
+- **Salami Attack** 🚀 - Innovative **Salami Slicing** progressive attack framework
+- **A-Salami Attack** 🔧 - Modern **adaptive multi-turn** attack system
 
 ## 🎯 Core Value
 
@@ -40,9 +40,9 @@ This repository contains two advanced security research frameworks focused on La
 ## 🧭 Quick Start
 
 ```bash
-cd aw2s_attack/ && python -c "from aw2s_attack import Adaptive_W2SAttack"
-cd w2s_attack/ && python -c "from w2s_attack import W2SAttack"
+cd a_salami/ && python -c "from a_salami import Adaptive_W2SAttack"
+cd salami_attack/ && python -c "from w2s_attack import W2SAttack"
 ```
 
-- 📖 [W2S Attack Detailed Documentation](./w2s_attack/README.md)
-- 📖 [Adaptive W2S Attack Detailed Documentation](./aw2s_attack/README.md)
+- 📖 [Salami Attack Detailed Documentation](./salami_attack/README.md)
+- 📖 [A-Salami Attack Detailed Documentation](./a_salami/README.md)

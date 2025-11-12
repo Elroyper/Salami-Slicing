@@ -1,4 +1,4 @@
-# 🛡️ W2S Attack: Weak-to-Strong Multi-Turn Black-Box Jailbreak Framework
+# 🛡️ Salami Attack: Salami Slicing Multi-Turn Black-Box Jailbreak Framework
 
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
@@ -6,7 +6,7 @@
 
 ## 📋 Overview
 
-**W2S Attack** is a sophisticated multi-turn black-box jailbreak framework designed for red-team testing of Large Language Models (LLMs). This package implements a novel **Weak-to-Strong** attack methodology that progressively escalates seemingly innocent prompts into potentially harmful outputs through carefully crafted perturbations.
+**Salami Attack** is a sophisticated multi-turn black-box jailbreak framework designed for red-team testing of Large Language Models (LLMs). This package implements a novel **Salami Slicing** attack methodology that progressively escalates seemingly innocent prompts into potentially harmful outputs through carefully crafted perturbations.
 
 ### 🎯 Key Features
 
@@ -21,7 +21,7 @@
 ## 🏗️ Architecture
 
 ```
-w2s_attack/
+salami_attack/
 ├── __init__.py           # Package initialization and exports
 ├── w2s_attack.py        # 🎯 Main attack framework (single, dataset, score)
 ├── attacker.py          # 🚀 Attack prompt generation
@@ -35,12 +35,12 @@ w2s_attack/
 ### Installation
 
 ```bash
-# Clone or download the w2s_attack package to your project directory
+# Clone or download the salami_attack package to your project directory
 # Add the parent directory to your Python path
 import sys
 sys.path.append('/path/to/your/project')
 
-from w2s_attack import W2SAttack, Attacker, Chat_Model
+from salami_attack import W2SAttack, Attacker, Chat_Model
 ```
 
 ### Basic Usage
@@ -48,7 +48,7 @@ from w2s_attack import W2SAttack, Attacker, Chat_Model
 #### 1️⃣ Implement Your Chat Model
 
 ```python
-from w2s_attack import Chat_Model
+from salami_attack import Chat_Model
 
 class YourChatModel(Chat_Model):
     def __init__(self, api_key, model_name):
@@ -73,7 +73,7 @@ class YourChatModel(Chat_Model):
 #### 2️⃣ Set Up Attack Components
 
 ```python
-from w2s_attack import (
+from salami_attack import (
     W2SAttack, 
     Attacker, 
     Jailbreak_Judge_Long, 
@@ -91,7 +91,7 @@ jailbreak_judge = Jailbreak_Judge_Long(chat_model=judge_model)
 refusal_judge = Refusal_Judge(chat_model=judge_model)
 score_judge = Score_Judge(chat_model=judge_model)  # NEW
 
-# Initialize W2S Attack framework
+# Initialize Salami Attack framework
 w2s_attack = W2SAttack(
     attacker=attacker,
     target_model=target_model,
@@ -204,7 +204,7 @@ response = safe_model.send_chat_prompt([
 
 ## ⚙️ Configuration Options
 
-### W2SAttack Parameters
+### Salami Attack Parameters (W2SAttack)
 
 | Parameter | Type | Default | Description |
 |-----------|------|---------|-------------|
@@ -245,7 +245,7 @@ The framework provides **three complementary evaluation pipelines**:
 ### Custom Judge Implementation
 
 ```python
-from w2s_attack import Base_Judge
+from salami_attack import Base_Judge
 
 class CustomJudge(Base_Judge):
     def classify_responses(self, prompts, responses):
